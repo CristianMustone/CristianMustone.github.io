@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Subir archivo de texto y enviar contenido</title>
+
+    <script>
+        function mostrarContenido() {
+            var fileInput = document.getElementById('archivo');
+            var file = fileInput.files[0];
+            var reader = new FileReader();
+
+            reader.onload = function (e) {
+                var contenido = e.target.result;
+                sessionStorage.setItem('contenidoArchivo', contenido);
+                enviarContenido(contenido); // Llamar a la función para enviar el contenido
+            };
+
+            reader.readAsText(file);
+        }
+
+        function enviarContenido(contenido) {
+            var messageElement = document.createElement('p'); // Crear un elemento <p> para mostrar el mensaje
+            document.body.appendChild(messageElement); // Agregar el elemento al cuerpo de la página
+
+            // Enviar contenido del archivo a través de una solicitud POST
+            var url = 'https://script.google.com/macros/s/AKfycbx4OhybyTxnyrfl0gZBD7UVtPMlXKuliM4_bIY-GXVduRwSF4Ywt0MtSQmRvjf01CrcrQ/exec'; // Reemplaza con la URL de tu hoja de cálculo
+            var formData = new FormData();
+            formData.append('columna1', contenido);
+
+            fetch(url, {
+                method: 'POST',
+                body: formData
+            })
+                .then(function (response) {
+                    // Manejar la respuesta de la solicitud POST
+                    if (response.ok) {
+                        messageElement.textContent = 'Contenido del archivo enviado exitosamente.';
+                    } else {
+                        messageElement.textContent = 'Error al enviar el contenido del archivo.';
+                    }
+                })
+                .catch(function (error) {
+                    messageElement.textContent = 'Error en la solicitud POST: ' + error;
+                });
+        }
+
+        function redirectToGitHub() {
+            // Redireccionar a la URL de GitHub
+            window.location.href = "https://github.com/CristianMustone/3D-Printer-Robotic-Arm.git";
+        }
+
+        function PedirAvance() {
+            console.log("Se ha hecho clic en el botón.");
+            // URL del script de Google Apps Script
+            var scriptUrl = 'https://script.google.com/macros/s/AKfycbzhyA7-li2_mEbGQmF8bA8-YJE-evMOFxLcz24farC0JJgiM2-fcK084o_NPIV4uaXSEw/exec';
+
+            // Realiza la solicitud GET usando la función fetch
+            fetch(scriptUrl)
+                .then(function (response) {
+                    return response.text();
+                })
+                .then(function (data) {
+                    console.log("Respuesta del servidor: " + data);
+                    var IP = data.replace(/['"]+/g, '');
+                    console.log("Respuesta del servidor: " + IP);
+                    window.location.href = 'http://' + IP;
+                })
+                .catch(function (error) {
+                    console.error("Error en la solicitud GET: " + error);
+                });
+        }
+    </script>
+
+    <style>
+        .body,
+        html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+        }
+
+        @keyframes bounceIn {
+            0% {
+                transform: scale(0.1);
+                opacity: 0;
+            }
+
+            60% {
+                transform: scale(1.2);
+                opacity: 1;
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        .container {
+            width: 100%;
+            text-align: center;
+            color: white;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            animation: bounceIn 1s ease-out forwards;
+            background-color: #6b7cff;
+        }
+
+        h1 {
+            font-size: 75px;
+            text-decoration: underline;
+            text-shadow: 2px 2px 1px rgba(255, 255, 255, 0.5);
+            color: #3b24c8;
+        }
+
+        p {
+            font-size: 40px;
+        }
+
+        .text-button {
+            font-size: 30px;
+            margin: 20px;
+            cursor: pointer;
+        }
+
+        .text-button:hover {
+            background-color: green;
+        }
+
+        .row {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* background-image: url('Imagenes/Gif6.gif');*/
+            background-color: black;
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: -1;
+            animation: zoomBackground 60s linear infinite alternate;
+            /* Animación de fondo */
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1>Subir archivo de texto</h1>
+        <P>Una vez obtenido el archivo.gcode, cambie la extensión de este a .txt y súbelo</P>
+        <input type="file" id="archivo" accept=".txt" style="font-size: 30px; cursor: pointer;">
+        <br><br>
+        <div class="row">
+            <button onclick="mostrarContenido()" class="text-button">Subir</button>
+            <button onclick="PedirAvance()" class="text-button">Ver Avance</button>
+        </div>
+        <br><br>
+        <h2 onclick="redirectToGitHub()" style="cursor: pointer;">Ir al repositorio de GitHub del proyecto</h2>
+    </div>
+    <div class="background"></div>
+</body>
+
+</html>

@@ -1,0 +1,256 @@
+/* Estilos opcionales para mejorar la apariencia */
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.container {
+    width: 100%;
+    text-align: center;
+    color: white;
+    animation: fadeIn 1s ease-out forwards;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.slide {
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(100vh);
+    transition: transform 0.8s ease-in-out;
+    text-align: center;
+    margin-top: -20px;
+}
+
+.slide.active {
+    transform: translateY(0);
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* background-image: url('Imagenes/Gif6.gif');*/
+    background-color: black;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: -1;
+    animation: zoomBackground 60s linear infinite alternate;
+    /* Animación de fondo */
+}
+
+@keyframes zoomBackground {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.6);
+    }
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.rowJustify {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.column {
+    flex: 1;
+    margin: 10px;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards, slideIn 1s ease-out forwards;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+.card {
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 10px;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards, scaleCard 0.5s ease-out forwards;
+    /* Animación de tarjeta */
+    transition: transform 0.3s ease-in-out;
+    /* Transición para la animación de zoom */
+    color: white;
+    text-align: center;
+}
+
+.card:hover {
+    transform: scale(1.6);
+    /* Aumentar el tamaño cuando se pasa el cursor */
+}
+
+@keyframes scaleCard {
+    from {
+        transform: scale(0.5);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
+
+h1 {
+    color: #fff;
+    font-style: oblique;
+    font-size: 42px;
+}
+
+.titulo-principal {
+    font-size: 100px;
+    text-align: center;
+    font-family: "Times New Roman", serif;
+    color: #0f0;
+    text-decoration: underline;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards, blinkTitle 3s ease-in-out infinite alternate;
+    /* Animación del título */
+}
+
+@keyframes blinkTitle {
+    from {
+        opacity: 0.5;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.imagen-ajustada {
+    max-width: 100%;
+    height: 250px;
+    justify-content: center;
+    align-content: center;
+}
+
+.imagen-instalaciones {
+    max-width: 100%;
+    height: 220px;
+}
+
+.imagen-ajustada75 {
+    max-width: 25%;
+    height: auto;
+    display: flex;
+    justify-content: right;
+    align-content: center;
+    /* padding-left: 75px; */
+}
+
+p {
+    font-size: 16px;
+}
+
+.frase {
+    font-style: italic;
+    font-size: 30px;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+    /* Animación de entrada */
+}
+
+.columnCenter {
+    display: flex;
+    align-items: center;
+}
+
+.enlace-personalizado {
+    color: white;
+    text-decoration: none;
+}
+
+#TarjetaSoftware {
+    text-align: center;
+    border: 10px solid rgb(12, 12, 88);
+    border-radius: 10px;
+    padding: 10px;
+    background-color: darkcyan;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+    width: 75%;
+    /* Animación de entrada */
+}
+
+#texto-descripcion {
+    font-size: x-large;
+    justify-content: center;
+    opacity: 0;
+    animation: fadeIn 1s ease-out forwards;
+    /* Animación de entrada */
+    color: white;
+}
+
+.menu {
+    position: sticky;
+    z-index: 1000;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: absolute;
+}
+
+.menu-personalizado {
+    color: #09f;
+    text-decoration: underline;
+    font-size: 15px;
+}
+
+.menu li {
+    list-style: none;
+    /* Eliminar los puntos de la lista */
+    margin: 0;
+    /* Eliminar cualquier margen */
+    padding: 0;
+    /* Eliminar cualquier relleno */
+}
+
+#h2Prototipos {
+    color: white;
+    text-decoration: underline;
+    font-size: 50px;
+    text-align: center;
+}
