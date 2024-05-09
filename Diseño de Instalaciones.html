@@ -1,17 +1,3 @@
-<!-- <!DOCTYPE html>
-<html lang="es">
-
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Página en Proceso</title>
-</head>
-
-<body>
-	<h1>Página en Proceso</h1>
-</body>
-
-</html> -->
 <!DOCTYPE html>
 <html lang="es">
 
@@ -20,6 +6,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Prototipos</title>
 	<link rel="stylesheet" href="Main.css">
+	<script>
+		function redirectToInfo() {
+			// Redireccionar a la URL de formulario de respuesta
+			console.log("Yendo al formulario");
+			window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSe54lLCmWXgyq5BmNHkwzOy3v2RBcth7CDuRAyewAYY26E-qA/viewform?usp=sf_link";
+		}
+	</script>
 </head>
 
 <body>
@@ -52,7 +45,9 @@
 		sostenible y eficiente.
 	</p>
 	<h2 id="h2Prototipos">Detalles del Diseño</h2>
-	<button onclick="window.location.href = 'Info.html';">Pedir solución</button>
+	<div class="row">
+		<button onclick="redirectToInfo()" style="cursor: pointer;" class="Boton_cotizazcion">Pedir solución</button>
+	</div>
 	<div class="background"></div>
 </body>
 

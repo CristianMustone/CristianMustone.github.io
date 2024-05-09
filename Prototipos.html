@@ -6,6 +6,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Prototipos</title>
 	<link rel="stylesheet" href="Main.css">
+	<script>
+		function redirectToInfo() {
+			// Redireccionar a la URL de formulario de respuesta
+			console.log("Yendo al formulario");
+			window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSe54lLCmWXgyq5BmNHkwzOy3v2RBcth7CDuRAyewAYY26E-qA/viewform?usp=sf_link";
+		}
+	</script>
 </head>
 
 <body>
@@ -39,7 +46,9 @@
 		proyectos más ambiciosos.
 	</p>
 	<h2 id="h2Prototipos">Algunos de nuestros prototipos ya realizados</h2>
-	<button onclick="window.location.href = 'Info.html';">Pedir solución</button>
+	<div class="row">
+		<button onclick="redirectToInfo()" style="cursor: pointer;" class="Boton_cotizazcion">Pedir solución</button>
+	</div>
 	<div class="row">
 		<div class="column">
 			<div class="card">

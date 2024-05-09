@@ -19,6 +19,10 @@ html {
     align-items: center;
 }
 
+#softwarecontainer {
+    height: auto;
+}
+
 .slide {
     width: 100%;
     height: 10%;
@@ -133,18 +137,21 @@ html {
 h1 {
     color: #fff;
     font-style: oblique;
-    font-size: 4vw;
+    font-size: 3vw;
 }
 
 .titulo-principal {
-    font-size: 10vw;
+    font-size: 5vw;
+    width: 100%;
     text-align: center;
     font-family: "Times New Roman", serif;
+    position: relative;
+    margin-top: 20vh;
     color: #0f0;
     text-decoration: underline;
     opacity: 0;
     animation: fadeIn 1s ease-out forwards, blinkTitle 3s ease-in-out infinite alternate;
-    /* Animación del título */
+
 }
 
 @keyframes blinkTitle {
@@ -200,7 +207,7 @@ p {
     text-decoration: none;
 }
 
-#TarjetaSoftware {
+.TarjetaSoftware {
     text-align: center;
     border: 0.1em solid rgb(12, 12, 88);
     border-radius: 1vw;
@@ -209,7 +216,7 @@ p {
     opacity: 0;
     animation: fadeIn 2s ease-out forwards;
     width: 75%;
-    /* Animación de entrada */
+    margin: 2%;
 }
 
 #texto-descripcion {
@@ -250,4 +257,30 @@ p {
     text-decoration: underline;
     font-size: 5vw;
     text-align: center;
+}
+
+.Boton_cotizazcion {
+    display: inline-block;
+    padding: 1.2vw 2.4vw;
+    font-size: 1vw;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    border: 0.2vw solid #4CAF50;
+    border-radius: 5px;
+    color: #4CAF50;
+    background-color: white;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+    align-self: center;
+    margin-bottom: 1vw;
+}
+
+.Boton_cotizazcion:hover {
+    background-color: #4CAF50;
+    /* Cambio de color de fondo al pasar el mouse */
+    color: white;
+    /* Cambio de color del texto al pasar el mouse */
+    border-color: #4CAF50;
+    /* Cambio de color del borde al pasar el mouse */
 }

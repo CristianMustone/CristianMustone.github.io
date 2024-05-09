@@ -6,47 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soluciones de Software</title>
     <link rel="stylesheet" href="Main.css">
-    <!-- <style>
-        /* Estilos opcionales para mejorar la apariencia */
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
+    <script>
+        function redirectToInfo() {
+            // Redireccionar a la URL de formulario de respuesta
+            console.log("Yendo al formulario");
+            window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSe54lLCmWXgyq5BmNHkwzOy3v2RBcth7CDuRAyewAYY26E-qA/viewform?usp=sf_link";
         }
-
-        .column {
-            flex: 1;
-            /* Distribuye el espacio disponible entre las columnas */
-            margin: 10px;
-            /* Espacio entre las columnas */
-            max-width: 100%;
-
-            justify-content: center;
-        }
-
-        .row {
-            display: flex;
-            max-width: 100%;
-        }
-
-        .card {
-            width: 100%;
-            border: 10px solid #000000;
-            border-radius: 10px;
-            padding: 10px;
-            margin-bottom: 10px;
-        }
-    </style> -->
+    </script>
 </head>
 
 <body>
 
-    <div class="container">
+    <div class="container" id="softwarecontainer">
         <h1 class=titulo-principal>Soluciones de Software</h1>
-
         <div class="row">
-            <div class="card" id="TarjetaSoftware">
-                <h1><a href="Info.html" class="enlace-personalizado">RPA</a></h1>
+            <div class="TarjetaSoftware">
+                <h1>RPA</h1>
+                <button onclick="redirectToInfo()" style="cursor: pointer;">Realizar consulta </button>
                 <p>
                     Se realizan automatizaciones de tareas digitales a traves de
                     lenguajes de programación requeridos, pudiendo integrar gran
@@ -54,11 +30,13 @@
                     con paginas web, ya sea para descargar, enviar, subir archivos
                     y obtencion de información de la web.
                 </p>
+                <a> </a>
             </div>
         </div>
         <div class="row">
-            <div class="card" id="TarjetaSoftware">
-                <h1><a href="Info.html" class="enlace-personalizado">Scripts</a></h1>
+            <div class="TarjetaSoftware">
+                <h1>Scripts</h1>
+                <button onclick="redirectToInfo()" style="cursor: pointer;">Realizar consulta </button>
                 <p>
                     Realizacion de programas para el armado
                     de informes, archiovos o reportes requeridos con una cierta
@@ -68,8 +46,9 @@
             </div>
         </div>
         <div class="row">
-            <div class="card" id="TarjetaSoftware">
-                <h1><a href="Info.html" class="enlace-personalizado">Pagina WEB personalizada</a></h1>
+            <div class="TarjetaSoftware">
+                <h1>Pagina WEB personalizada</h1>
+                <button onclick="redirectToInfo()" style="cursor: pointer;">Realizar consulta </button>
                 <p>
                     Creacion de paginas web a pedido del usuario con utilidades requeridas,
                     como solicitud de informacion, venta al publico, publicidad en linea, etc.
