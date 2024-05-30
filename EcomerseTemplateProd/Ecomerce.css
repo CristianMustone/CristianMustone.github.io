@@ -1,0 +1,240 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: blue;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+#nombre_principal {
+    font-family: 'TimeNewRoman';
+    font-size: 10vmin;
+    color: orange;
+    font-weight: bold;
+}
+
+#Logo {
+    width: 100%;
+    height: 20vmax;
+    overflow: hidden;
+}
+
+#product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    justify-content: center;
+}
+
+#product-oferta {
+    display: flex;
+    overflow: scroll;
+}
+
+.product-card {
+    margin: 1vmin;
+    padding: 1vmin;
+    width: 20vmin;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    background-color: black;
+    color: white;
+    min-width: 200px;
+}
+
+.product-card img {
+    width: 100%;
+    height: auto;
+}
+
+.product-card h3,
+.product-card p,
+.product-card button {
+    margin: 0.5rem 0;
+}
+
+.product-details {
+    display: none;
+}
+
+.product-card.expanded {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 75%;
+    height: 75%;
+    z-index: 1000;
+    padding: 3vw;
+    justify-content: center;
+    align-content: center;
+    background-color: black;
+    color: white;
+    overflow: scroll;
+}
+
+.product-card.expanded img {
+    width: 30%;
+    height: auto;
+}
+
+.product-card.expanded .product-details {
+    display: block;
+    text-align: left;
+}
+
+.counter-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+.counter-btn {
+    padding: 10px;
+    font-size: 20px;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    background-color: #f0f0f0;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.counter-value {
+    width: 60px;
+    text-align: center;
+    font-size: 20px;
+    border: 1px solid #ccc;
+    margin: 0 5px;
+}
+
+#contacto {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    padding: 0 2vmin;
+}
+
+#contacto h1 {
+    font-size: 3vw;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    margin-left: 3vmin;
+    margin-top: 2vmin;
+}
+
+.img_contacto {
+    height: 6vmin;
+    width: 6vmin;
+    justify-content: center;
+    align-content: center;
+    margin: 0 3vmin;
+}
+
+.enlace {
+    color: black;
+    text-decoration: underline;
+    text-align: center;
+    text-align: center;
+    font-size: 0.75em;
+}
+
+footer {
+    background-color: #e09145;
+}
+
+
+footer p {
+    text-align: center;
+}
+
+#ofertas {
+    display: flex;
+    gap: 3vmin;
+    width: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    justify-content: flex-start;
+}
+
+#scroll_left,
+#scroll_right {
+    width: 20px;
+    cursor: pointer;
+    align-content: center;
+}
+
+#scroll_left {
+    position: relative;
+    left: 0;
+    z-index: 500;
+}
+
+#scroll_right {
+    position: relative;
+    right: 0;
+    z-index: 500;
+}
+
+#buscador {
+    display: flex;
+    height: auto;
+    margin: 0.5vmin 0;
+    background-color: grey;
+}
+
+#buscador h1 {
+    margin-left: 1vmin;
+}
+
+#search-bar {
+    width: 30%;
+    height: auto;
+    margin: 1vmin 1vmin;
+}
+
+#search-btn {
+    width: auto;
+    height: auto;
+    margin: 1vmin 0;
+}
+
+#Todos_Productos {
+    font-size: 3.5vmin;
+    padding-left: 5vmin;
+}
+
+#Ofertas {
+    font-size: 5vmin;
+    padding-left: 5vmin;
+}
+
+#products {
+    justify-content: center;
+}
+
+@media(min-width: 720px) {
+
+    .enlace,
+    #Whatsapp_Number {
+        font-size: 2em;
+    }
+
+    #search-btn {
+        width: 10vmin;
+    }
+}

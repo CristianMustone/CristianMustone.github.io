@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Ecommerce</title>
+  <link rel="stylesheet" href="Ecomerce.css">
+</head>
+
+<body>
+  <header>
+    <img src="EcomerseImg/options.svg" id="more" onclick="ShowContact('contacto')">
+    <h1>Mi Ecommerce</h1>
+
+    <div id="contacto">
+      <div class="column">
+        <p>Contacto:</p>
+      </div>
+      <div class="column">
+        <img src="EcomerseImg/Facebook.svg" alt="Logo 3" class="img_contacto" id="Facebook">
+        <p><a href="" class="enlace">Facebook</a></p>
+      </div>
+      <div class="column">
+        <img src="EcomerseImg/Instagram.svg" alt="Logo 3" class="img_contacto" id="Instagram">
+        <p><a href="" class="enlace">Instagram</a></p>
+      </div>
+      <div class="column">
+        <img src="EcomerseImg/Mail.svg" alt="Logo 3" class="img_contacto" id="Mail">
+        <p><a href="mailto:" class="enlace">Correo Electronico</a></p>
+      </div>
+      <div class="column">
+        <img src="EcomerseImg/Celular.svg" alt="Logo 3" class="img_contacto" id="Whatsapp">
+        <p>0123456789</p>
+      </div>
+    </div>
+
+    <img src="EcomerseImg/shopping_cart.svg" id="cart" onclick="ShowCart()">
+  </header>
+
+  <div id="cart-container" class="cart-container"></div>
+
+  <main>
+    <h1 style="padding-left: 2vmin;">OFERTAS</h1>
+    <section id="ofertas">
+
+      <img src="EcomerseImg/scrollarrowtoleft_83879.svg" id="scroll_left"
+        onclick="scrollProductsLeft('product-oferta')">
+
+      <div id="product-oferta"></div>
+
+      <img src="EcomerseImg/scrollarrowtoright_83712.svg" id="scroll_right"
+        onclick="scrollProductsRight('product-oferta')">
+    </section>
+    <section id="products">
+      <div id="buscador">
+        <h1>Todos los Productos:</h1>
+        <input type="text" id="search-bar" placeholder="Buscar producto...">
+        <button id="search-btn">Buscar</button>
+      </div>
+      <div id="product-list"></div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2024 Mi Ecommerce</p>
+  </footer>
+  <script src="Ecomerce.js"></script>
+</body>
+
+</html>

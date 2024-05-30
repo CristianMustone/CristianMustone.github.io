@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Creacion de Paginas Web</title>
+    <style>
+        /* Título Principal y palabras resaltadas: #009000
+            H1: #1e8c45
+            Background General: #111111
+            Texto (<p>): #ffffff
+            Borde H2: #A45430
+            Background boton: #532A09 */
+
+        body {
+            background-color: #111111;
+            width: 90%;
+            margin: auto;
+            font-family: 'Vollkorn';
+        }
+
+        #tituloPW {
+            font-size: 3em;
+            text-align: center;
+            color: #009000;
+            text-decoration: underline;
+            text-underline-offset: 5PX;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            text-align: center;
+            text-decoration: underline;
+            text-underline-offset: 7PX;
+            color: #1e8c45;
+        }
+
+        h2 {
+            font-size: 2em;
+            text-align: center;
+            border: 2px solid #A45430;
+            padding: 10px;
+            border-radius: 15px;
+            margin: 0 15px;
+        }
+
+        h3 {
+            font-size: 1.5em;
+        }
+
+        .destacado {
+            color: #009000;
+            text-decoration: underline;
+            text-underline-offset: 5PX;
+        }
+
+        .proyecto {
+            color: #ffffff;
+        }
+
+        .more_description {
+            display: none;
+        }
+
+        .ver_mas {
+            cursor: pointer;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px;
+            border: 1px solid #A45430;
+            color: #ffffff;
+            margin-bottom: 15px;
+        }
+
+        .enlace {
+            text-align: center;
+            color: #ffffff;
+            padding: 5px;
+        }
+
+        .btn_comprar {
+            background-color: #532A09;
+            border-radius: 5px;
+            padding: 5px;
+            cursor: pointer;
+            text-align: center;
+            color: #ffffff;
+            margin-top: 20px;
+            font-size: 2.5vmax;
+        }
+
+        .imagen_ejemplo {
+            display: none;
+        }
+
+        @media (min-width:1000px) {
+            .main_info {
+                display: flex;
+            }
+
+            .info {
+                margin-top: 20px;
+                padding: 0 10px;
+            }
+
+            #tituloPW {
+                font-size: 4em;
+            }
+
+            h1 {
+                font-size: 3em;
+                text-align: center;
+                text-decoration: underline;
+            }
+
+            h2 {
+                font-size: 2em;
+                text-align: center;
+            }
+
+            h3 {
+                font-size: 1.8em;
+            }
+
+            p,
+            li {
+                font-size: 1.5em;
+            }
+
+            .imagen_ejemplo {
+                display: block;
+                width: 50%;
+                height: auto;
+                margin: 0;
+                padding: 0;
+                max-width: 500px;
+            }
+
+            .ver_mas {
+                display: none;
+            }
+
+            .more_description {
+                display: block;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            .column_more_info {
+                flex: 1;
+                margin: 0 auto;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <section id="proyectos">
+        <h1 id="tituloPW">Desarrollos Web a su disposición</h1>
+        <br>
+        <hr>
+        <br>
+        <div class="proyecto">
+            <div class="main_info">
+                <div class="info">
+                    <h1>Página web para Tú Ecommerce</h1>
+                    <h2>¿Quiere comenzar a llegar a mas clientes mostrando sus
+                        productos en internet?
+                    </h2>
+                    <h3>
+                        Usted puede <span class="destacado">HACERLO AHORA!</span>
+                    </h3>
+                    <p>
+                        Con nuestra pagina web, va a poder mostrar sus productos en
+                        una página web sin complicaciones, administrandola desde un
+                        Google Sheets desde donde actualizar los precios, descripciones,
+                        agregar o eliminar productos con un solo click
+                    </p>
+                    <p class="enlace"><a href="EcomerseTemplateProd/Ecomerce.html" class="enlace">Ver Modelo</a></p>
+                    <div onclick="visibility('info_ecommerceprod')" class="ver_mas">Ver Más</div>
+                </div>
+                <img src="Imagenes/WebPage.svg" class="imagen_ejemplo">
+            </div>
+            <div class="more_description" id="info_ecommerceprod">
+                <section class="column_more_info">
+                    <h2>¿Como administrarla?</h2>
+                    <ul>
+                        <li>Se le configurará un Google Sheet de su eleccion donde
+                            podra ir subiendo los productos con sus respecticas caractisticas</li>
+                        <li>La pagina leerá directamente los datos del archivo y actualizará los datos</li>
+                    </ul>
+                </section>
+                <section class="column_more_info">
+                    <h2>¿Que ventaja obtendra?</h2>
+                    <ul>
+                        <li>Llegar a una cantidad de clientes masiva</li>
+                        <li>Mayor reconocimiento en su sector</li>
+                        <li>Sin complicaciones para actualizar los datos</li>
+                        <li>Poder actualizarla desde cualqueir sitio que se cuentre, con solo su celular</li>
+                        <li>Sin comprometer datos, ya que solo usted tendra acceso al archivo (y a quien autorice)</li>
+                        <li>No necesita conocimientos de codigo ni perder tiempo</li>
+                    </ul>
+
+                </section>
+                <section class="column_more_info">
+                    <h2>¿Que necesita?</h2>
+                    <ul>
+                        <li>Imagenes de los productos (opcional)</li>
+                        <li>Contar con una cuenta de google y google drive</li>
+                        <li>Precio: $150.000</li>
+                        <li>Tiempo de implementacion: 1 días (con todos los archivos listos)</li>
+                        <li>(Se lo asesora para la contratacion del dominio)</li>
+                    </ul>
+                </section>
+            </div>
+            <div class="btn_comprar">Obtener</div>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div class="proyecto">
+            <div class="main_info">
+                <img src="Imagenes/WebPage.svg" class="imagen_ejemplo">
+                <div class="info">
+                    <h1>Tu propio Portfolio profesional</h1>
+                    <h2>¿Quiere conseguir un trabajo en el area de IT o cualquier otro rubro?
+                    </h2>
+                    <h3>
+                        <span class="destacado">CONSIGALO AHORA!</span>
+                    </h3>
+                    <p>
+                        Con nuestro protfolio usted podra contrar y exponer a su futuro empleador o cliente todas sus
+                        habilidades y experiencia de una forma mucho mas profecional y única.
+                        Es un gran fora de presentarse a si mismo, pudiendolo adjuntar a un correo, su tarjeta de
+                        presentacion y funciona excelente como reemplazo del antiguo y aburrido CV en pdf.
+                    </p>
+                    <p class="enlace"><a href="PortfolioTemplate/PortfolioTemplate.html" class="enlace">Ver Modelo</a>
+                    <div onclick="visibility('info_portfolio')" class="ver_mas">Ver Más</div>
+                    </p>
+                </div>
+            </div>
+            <div class="more_description" id="info_portfolio">
+                <section class="column_more_info">
+                    <h2>¿Como administrarla?</h2>
+                    <ul>
+                        <li>Se le entregara un instructivo de como subirla a internet GRATIS por tiempo ilimitado</li>
+                    </ul>
+                </section>
+                <section class="column_more_info">
+                    <h2>¿Que ventaja obtendra?</h2>
+                    <ul>
+                        <li>Presentarse de forma profesional y diferente</li>
+                        <li>Una pagina donde mostrar sus habilidades y experiencias</li>
+                        <li>Una presentacion moderna del antiguo y aburrido CV</li>
+                        <li>No tendra que pagar servicios por dominio o hosting, es GRATIS</li>
+                    </ul>
+                </section>
+                <section class="column_more_info">
+                    <h2>¿Que necesita?</h2>
+                    <ul>
+                        <li>Imagenes de los proyectos y perfil (opcionales)</li>
+                        <li>Contar con una cuenta de google</li>
+                        <li>Precio: $50.000</li>
+                        <li>Tiempo de implementacion: 1 días (con todos los archivos listos)</li>
+                        <li>Se le entrega un instructivo paso a paso de como subir su pagina GRATIS</li>
+                    </ul>
+                </section>
+            </div>
+            <div class="btn_comprar">Obtener</div>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div class="proyecto">
+            <div class="main_info">
+                <div class="info">
+
+                    <h1>Tienda online para Tú Ecommerce</h1>
+                    <h2>¿Quiere comenzar a vender tus productos por internet, llegando a mas clientes?
+                    </h2>
+                    <h3>
+                        <span class="destacado">HAGALO AHORA!</span>
+                    </h3>
+                    <p>
+                        Con nuestra tienda online, va a poder mostrar sus productos en
+                        una página web sin complicaciones, administrandola desde un
+                        Google Sheets desde donde actualizar los precios, descripciones,
+                        agregar o eliminar productos con un solo click.
+                        Además podra verderlos por la página, recibiendo el pago en minutos y directamente a su cuenta
+                        de
+                        Mecado Pago.
+                    </p>
+                    <p class="enlace"><a href="EcomerseTemplateCart/Ecomerce.html" class="enlace">Ver Modelo</a></p>
+                    <div onclick="visibility('info_ecommercecart')" class="ver_mas">Ver Más</div>
+                </div>
+                <img src="Imagenes/WebPage.svg" class="imagen_ejemplo">
+            </div>
+            <div class="more_description" id="info_ecommercecart">
+                <section class="column_more_info">
+                    <h2>¿Como administrarla?</h2>
+                    <ul>
+                        <li>Se le configurará un Google Sheet de su eleccion donde
+                            podra ir subiendo los productos con sus respecticas caractisticas</li>
+                        <li>La pagina leerá directamente los datos del archivo y actualizará los datos</li>
+                    </ul>
+                </section>
+                <section class="column_more_info">
+                    <h2>¿Que ventaja obtendra?</h2>
+                    <ul>
+                        <li>Llegar a una cantidad de clientes masiva</li>
+                        <li>Mayor reconocimiento en su sector</li>
+                        <li>Sin complicaciones para actualizar los datos</li>
+                        <li>Poder actualizarla desde cualqueir sitio que se cuentre, con solo su celular</li>
+                        <li>Sin comprometer datos, ya que solo usted tendra acceso al archivo (y a quien autorice)</li>
+                        <li>No necesita conocimientos de codigo ni perder tiempo</li>
+                        <li>Recibira el pago en minutos sin necesidad de encontrarse en el local, o cuando el mismo se
+                            encuentre cerrado. Ventas 24/7</li>
+                    </ul>
+                </section>
+                <section class="column_more_info">
+                    <h2>¿Que necesita?</h2>
+                    <ul>
+                        <li>Imagenes de los productos (opcional)</li>
+                        <li>Contar con una cuenta de google, google drive y Mercado Pago</li>
+                        <li>Precio: $200.000</li>
+                        <li>Tiempo de implementacion: 1 días (con todos los archivos listos)</li>
+                        <li>(Se lo asesora para la contratacion del dominio)</li>
+                    </ul>
+                </section>
+            </div>
+            <div class="btn_comprar">Obtener</div>
+        </div>
+        <br>
+        <hr>
+        <br>
+        <div class="proyecto">
+            <div class="main_info">
+                <img src="Imagenes/WebPage.svg" class="imagen_ejemplo">
+                <div class="info">
+
+                    <h1>Pagina web 100% personalizada</h1>
+                    <h2>¿Quiere obtener una pagina web completamene a su preferencia y necesidades?
+                    </h2>
+                    <p>
+                        Podemos desarrollar una pagina web 100% pensada para usted, tendiendo en cuenta los
+                        requerimientos y preferencias de su negocio, emprendimiento, producto o servicio.</p>
+                    <h3>
+                        <span class="destacado">LAS POSIBILIDADES SON INFINITAS!</span>
+                    </h3>
+                    <div onclick="visibility('info_ecommercecart')" class="ver_mas">Ver Más</div>
+                </div>
+            </div>
+            <div class="more_description" id="info_ecommercecart">
+                <section class="column_more_info">
+                    <h2>¿Que ventaja obtendra?</h2>
+                    <ul>
+                        <li>Llegar a una cantidad de clientes masiva</li>
+                        <li>Mayor reconocimiento en su sector</li>
+                        <li>Sin complicaciones para actualizar los datos</li>
+                        <li>Poder actualizarla desde cualqueir sitio que se cuentre, con solo su celular</li>
+                        <li>Sin comprometer datos, ya que solo usted tendra acceso al archivo (y a quien autorice)</li>
+                        <li>No necesita conocimientos de codigo ni perder tiempo</li>
+                        <li>Recibira el pago en minutos sin necesidad de encontrarse en el local, o cuando el mismo se
+                            encuentre cerrado. Ventas 24/7</li>
+                    </ul>
+                </section>
+                <section class="column_more_info">
+                    <h2>¿Que necesita?</h2>
+                    <ul>
+                        <li>Imagenes de los productos (opcional)</li>
+                        <li>Contar con una cuenta de google, google drive y Mercado Pago</li>
+                        <li>Precio: $200.000</li>
+                        <li>Tiempo de implementacion: 1 días (con todos los archivos listos)</li>
+                        <li>(Se lo asesora para la contratacion del dominio)</li>
+                    </ul>
+                </section>
+            </div>
+            <div class="btn_comprar">Obtener</div>
+        </div>
+    </section>
+    <script>
+        function visibility(info) {
+            const section = document.getElementById(info);
+            if (section.style.display != "block") {
+                section.style.display = "block";
+            } else {
+                section.style.display = "none";
+            };
+        }
+    </script>
+</body>
+
+</html>
