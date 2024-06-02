@@ -6,6 +6,169 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Prototipos</title>
 	<link rel="stylesheet" href="Main.css">
+	<style>
+		body {
+			text-align: center;
+		}
+
+		:root {
+			--verde_dark: #034638;
+			--verde_oscuro: #006400;
+			--verde_claro: #30B852;
+			--madera_claro: #A45430;
+			--madera_oscuro: #532A09;
+			--background_negro: #111111;
+		}
+
+		p {
+			font-size: 1.5em;
+			padding: 0 5vmin;
+			text-align: left;
+		}
+
+		.Boton_cotizazcion {
+			background-color: var(--madera_claro);
+			border: none;
+			padding: 3vmin;
+			margin: 5vmin 0;
+			color: #FFFFFF;
+			cursor: pointer;
+			text-align: center;
+			font-weight: bold;
+			font-size: 1.25em;
+		}
+
+		.cards {
+			display: flex;
+			flex-wrap: wrap;
+		}
+
+		.card {
+			max-width: 20%;
+		}
+
+		.card {
+			border: 5px solid var(--verde_oscuro);
+			border-radius: 10px;
+			padding: 5vmin;
+		}
+
+		@media (min-width:720px) {
+			h2 {
+				font-size: 2.5em;
+			}
+		}
+
+		@media (max-width:720px) {
+
+			/*celular*/
+			#titulo_principal {
+				padding: 0 2vmin;
+				font-size: 3em;
+			}
+
+
+			h2 {
+				font-size: 2em;
+				text-align: center;
+				padding: 10px;
+				margin: 0 15px;
+				margin-bottom: 5vmin;
+			}
+
+			p {
+				padding: 2vmin 5vmin;
+				text-align: left;
+			}
+
+			.enlace {
+				font-size: 1.5em;
+				margin: 5vmin 0;
+				width: 90%;
+				display: block;
+			}
+
+			body {
+				text-align: center;
+			}
+
+			.cards {
+				display: flex;
+				flex-direction: column;
+				gap: 5px;
+			}
+
+			.card {
+				max-width: 90%;
+				padding: 5vmin 2vmin;
+			}
+
+			.img_card {
+				margin: 2vmin;
+			}
+		}
+	</style>
+</head>
+
+<body>
+	<h1 id="titulo_principal">Prototipos Personalizados</h1>
+	<h2>Bienvenido a nuestra seccion de innovación y diseño de prototipos tecnológicos.</h2>
+	<br>
+	<div id="texto_descripcion">
+		<p>
+			En nuestro espacio, combinamos la creatividad con la tecnología de vanguardia
+			para ofrecerte soluciones únicas y personalizadas en diseño, armado y prueba
+			de prototipos tecnológicos. Nuestra pasión por la innovación nos impulsa a
+			explorar diversas técnicas, desde la impresión 3D hasta la fabricación de
+			prototipos en madera, y el uso de software de modelado 3D para crear productos
+			que transformen el mundo que nos rodea.
+		</p>
+		<p>
+			Con un enfoque centrado en el cliente, trabajamos mano a mano contigo para
+			entender tus necesidades y convertir tus ideas en realidad. Ya sea que estés
+			desarrollando un dispositivo electrónico, un producto para el hogar o una
+			solución industrial, nuestro equipo de expertos te guiará en cada paso del
+			proceso, desde la concepción hasta la producción en masa.
+		</p>
+		<p>
+			Nuestros servicios van más allá del diseño y la fabricación de prototipos.
+			También te ofrecemos la posibilidad de crear planos detallados para una futura
+			fabricación en masa, asegurando una transición sin problemas desde el prototipo
+			hasta la producción a gran escala.
+		</p>
+		<p>
+			En resumen, en nuestro espacio encontrarás la combinación perfecta de creatividad,
+			tecnología y experiencia para llevar tus ideas al siguiente nivel. Únete a nosotros
+			en el viaje hacia la innovación y descubre cómo juntos podemos dar vida a tus
+			proyectos más ambiciosos.
+		</p>
+	</div>
+	<br>
+	<h2>Algunos de nuestros prototipos ya realizados</h2>
+	<button onclick="redirectToInfo()" class="Boton_cotizazcion">Pedir solución</button>
+	<div class="cards">
+		<div class="card">
+			<img src="Imagenes/ImagenSoftwares.jpg" alt="Imagen Tarjeta 2" class="img_card">
+			<a href="Enviar archivo Tesis.html" class="enlace">Fuente de Laboratorio</a>
+		</div>
+		<div class="card">
+			<img src="Imagenes/Protoripos.jpeg" alt="Imagen Tarjeta 2" class="img_card">
+			<a href="Enviar archivo Tesis.html" class="enlace">Ladrillo para Instalaciones</a>
+		</div>
+		<div class="card">
+			<img src="Imagenes/Instalaciones.jpeg" alt="Imagen Tarjeta 2" class="img_card">
+			<a href="Enviar archivo Tesis.html" class="enlace">Maquina de fabricacion de PCB
+				automática</a>
+		</div>
+		<div class="card">
+			<img src="Imagenes/ImagenSoftwares.jpg" alt="Imagen Tarjeta 2" class="img_card">
+			<a href="Enviar archivo Tesis.html" class="enlace">Ceniceros portatiles</a>
+		</div>
+		<div class="card">
+			<img src="Imagenes/Protoripos.jpeg" alt="Imagen Tarjeta 2" class="img_card">
+			<a href="Enviar archivo Tesis.html" class="enlace">Brazo Robotico tipo SCARA</a>
+		</div>
+	</div>
 	<script>
 		function redirectToInfo() {
 			// Redireccionar a la URL de formulario de respuesta
@@ -13,77 +176,6 @@
 			window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSe54lLCmWXgyq5BmNHkwzOy3v2RBcth7CDuRAyewAYY26E-qA/viewform?usp=sf_link";
 		}
 	</script>
-</head>
-
-<body>
-	<h1 class="titulo-principal">Prototipos Personalizados</h1>
-	<h2>Bienvenido a nuestra seccion de innovación y diseño de prototipos tecnológicos.</h2>
-	<p id="texto-descripcion">
-		En nuestro espacio, combinamos la creatividad con la tecnología de vanguardia
-		para ofrecerte soluciones únicas y personalizadas en diseño, armado y prueba
-		de prototipos tecnológicos. Nuestra pasión por la innovación nos impulsa a
-		explorar diversas técnicas, desde la impresión 3D hasta la fabricación de
-		prototipos en madera, y el uso de software de modelado 3D para crear productos
-		que transformen el mundo que nos rodea.
-	</p>
-	<p id="texto-descripcion">
-		Con un enfoque centrado en el cliente, trabajamos mano a mano contigo para
-		entender tus necesidades y convertir tus ideas en realidad. Ya sea que estés
-		desarrollando un dispositivo electrónico, un producto para el hogar o una
-		solución industrial, nuestro equipo de expertos te guiará en cada paso del
-		proceso, desde la concepción hasta la producción en masa.
-	</p>
-	<p id="texto-descripcion">
-		Nuestros servicios van más allá del diseño y la fabricación de prototipos.
-		También te ofrecemos la posibilidad de crear planos detallados para una futura
-		fabricación en masa, asegurando una transición sin problemas desde el prototipo
-		hasta la producción a gran escala.
-	</p>
-	<p id="texto-descripcion">
-		En resumen, en nuestro espacio encontrarás la combinación perfecta de creatividad,
-		tecnología y experiencia para llevar tus ideas al siguiente nivel. Únete a nosotros
-		en el viaje hacia la innovación y descubre cómo juntos podemos dar vida a tus
-		proyectos más ambiciosos.
-	</p>
-	<h2 id="h2Prototipos">Algunos de nuestros prototipos ya realizados</h2>
-	<div class="row">
-		<button onclick="redirectToInfo()" style="cursor: pointer;" class="Boton_cotizazcion">Pedir solución</button>
-	</div>
-	<div class="row">
-		<div class="column">
-			<div class="card">
-				<img src="Imagenes/ImagenSoftwares.jpg" alt="Imagen Tarjeta 2" class="imagen-ajustada">
-				<h2>Fuente de Laboratorio</h2>
-			</div>
-		</div>
-		<div class="column">
-			<div class="card">
-				<img src="Imagenes/Protoripos.jpeg" alt="Imagen Tarjeta 2" class="imagen-ajustada">
-				<h2>Ladrillo para Instalaciones</h2>
-			</div>
-		</div>
-		<div class="column">
-			<div class="card">
-				<img src="Imagenes/Instalaciones.jpeg" alt="Imagen Tarjeta 2" class="imagen-ajustada">
-				<h2>Maquina de fabricacion de PCB automática</h2>
-			</div>
-		</div>
-	</div>
-	<div class="row">
-		<div class="column">
-			<div class="card">
-				<img src="Imagenes/ImagenSoftwares.jpg" alt="Imagen Tarjeta 2" class="imagen-ajustada">
-				<h2>Ceniceros portatiles</h2>
-			</div>
-		</div>
-		<div class="column">
-			<div class="card">
-				<img src="Imagenes/Protoripos.jpeg" alt="Imagen Tarjeta 2" class="imagen-ajustada">
-				<h2><a href="Enviar archivo Tesis.html" class="enlace-personalizado">Brazo Robotico tipo SCARA</a></h2>
-			</div>
-		</div>
-	</div>
-	<div class="background"></div>
 </body>
 
 </html>

@@ -6,21 +6,98 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Soluciones de Software</title>
     <link rel="stylesheet" href="Main.css">
-    <script>
-        function redirectToInfo() {
-            // Redireccionar a la URL de formulario de respuesta
-            console.log("Yendo al formulario");
-            window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSe54lLCmWXgyq5BmNHkwzOy3v2RBcth7CDuRAyewAYY26E-qA/viewform?usp=sf_link";
+    <style>
+        :root {
+            --verde_dark: #034638;
+            --verde_oscuro: #006400;
+            --verde_claro: #30B852;
+            --madera_claro: #A45430;
+            --madera_oscuro: #532A09;
+            --background_negro: #111111;
         }
-    </script>
+
+        /* 
+        html {
+            background-color: green;
+        } */
+
+        /* body {
+            background-color: blue;
+            margin: 0 5vmin;
+            width: 100%;
+        } */
+
+        h1 {
+            padding: 0;
+        }
+
+        .cards {
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+        }
+
+        #titulo_principal {
+            padding: 0 5vmin;
+        }
+
+        button {
+            background-color: var(--madera_claro);
+            border: none;
+            padding: 3vmin;
+            margin-bottom: 5vmin;
+            color: #FFFFFF;
+        }
+
+        .card {
+            border: 5px solid var(--madera_oscuro);
+            border-radius: 5px;
+            padding: 5vmin;
+            margin: 2vmin;
+        }
+
+        .card p {
+            margin: 3vmin 0;
+        }
+
+        .enlace-personalizado {
+            text-decoration: underline 5px var(--madera_claro);
+            text-underline-offset: 3px;
+        }
+
+        @media(min-width:1000px) {
+
+            .enlace-personalizado:hover {
+                text-decoration: none;
+                background-color: var(--madera_claro);
+                border-radius: 5px;
+            }
+
+            .cards {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                gap: 5vmin;
+            }
+
+            h1 {
+                padding: 0;
+                margin: 5vmin 2vmin;
+            }
+
+            p {
+                font-size: 1.5em;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <div class="container" id="softwarecontainer">
-        <h1 class=titulo-principal>Soluciones de Software</h1>
-        <div class="row">
-            <div class="TarjetaSoftware">
+    <section>
+        <h1 id="titulo_principal">Soluciones de Software</h1>
+        <div class="cards">
+            <div class="card">
                 <h1>RPA</h1>
                 <button onclick="redirectToInfo()" style="cursor: pointer;">Realizar consulta </button>
                 <p>
@@ -32,9 +109,7 @@
                 </p>
                 <a> </a>
             </div>
-        </div>
-        <div class="row">
-            <div class="TarjetaSoftware">
+            <div class="card">
                 <h1>Scripts</h1>
                 <button onclick="redirectToInfo()" style="cursor: pointer;">Realizar consulta </button>
                 <p>
@@ -44,21 +119,24 @@
                     o facturas, manejo de bases de datos como SQL.
                 </p>
             </div>
-        </div>
-        <div class="row">
-            <div class="TarjetaSoftware">
-                <h1>Pagina WEB personalizada</h1>
+            <div class="card">
+                <h1>Páginas WEB</h1>
                 <button onclick="redirectToInfo()" style="cursor: pointer;">Realizar consulta </button>
                 <p>
                     Creacion de paginas web a pedido del usuario con utilidades requeridas,
                     como solicitud de informacion, venta al publico, publicidad en linea, etc.
                 </p>
-                <p><a href="PaginasWeb.html" class="enlace-personalizado">Ver Propuestas</a></p>
+                <a href="PaginasWeb.html" class="enlace">Ver Propuestas</a>
             </div>
         </div>
-        <div class="background"></div>
-    </div>
-
+    </section>
+    <script>
+        function redirectToInfo() {
+            // Redireccionar a la URL de formulario de respuesta
+            console.log("Yendo al formulario");
+            window.location.href = "https://docs.google.com/forms/d/e/1FAIpQLSe54lLCmWXgyq5BmNHkwzOy3v2RBcth7CDuRAyewAYY26E-qA/viewform?usp=sf_link";
+        }
+    </script>
 </body>
 
 </html>

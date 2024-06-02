@@ -5,58 +5,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Creacion de Paginas Web</title>
+    <link rel="stylesheet" href="Main.css">
     <style>
-        /* Título Principal y palabras resaltadas: #009000
-            H1: #1e8c45
-            Background General: #111111
-            Texto (<p>): #ffffff
-            Borde H2: #A45430
-            Background boton: #532A09 */
+        :root {
+            --verde_dark: #034638;
+            --verde_oscuro: #006400;
+            --verde_claro: #30B852;
+            --madera_claro: #A45430;
+            --madera_oscuro: #532A09;
+            --background_negro: #111111;
+        }
 
         body {
-            background-color: #111111;
+            /* background-color: #111111; */
             width: 90%;
             margin: auto;
             font-family: 'Vollkorn';
         }
 
-        #tituloPW {
-            font-size: 3em;
-            text-align: center;
-            color: #009000;
-            text-decoration: underline;
-            text-underline-offset: 5PX;
+        #titulo_principal {
+            padding: 0;
         }
 
         h1 {
-            font-size: 2.5em;
-            text-align: center;
-            text-decoration: underline;
-            text-underline-offset: 7PX;
-            color: #1e8c45;
-        }
-
-        h2 {
-            font-size: 2em;
-            text-align: center;
-            border: 2px solid #A45430;
-            padding: 10px;
-            border-radius: 15px;
-            margin: 0 15px;
+            padding: 0;
+            margin: 5vmin 2vmin;
         }
 
         h3 {
             font-size: 1.5em;
-        }
-
-        .destacado {
-            color: #009000;
-            text-decoration: underline;
-            text-underline-offset: 5PX;
-        }
-
-        .proyecto {
-            color: #ffffff;
+            margin: 20px 0;
         }
 
         .more_description {
@@ -68,19 +46,13 @@
             text-align: center;
             border-radius: 5px;
             padding: 5px;
-            border: 1px solid #A45430;
+            border: 5px solid var(--madera_claro);
             color: #ffffff;
-            margin-bottom: 15px;
-        }
-
-        .enlace {
-            text-align: center;
-            color: #ffffff;
-            padding: 5px;
+            margin: 15px 0;
         }
 
         .btn_comprar {
-            background-color: #532A09;
+            background-color: var(--madera_claro);
             border-radius: 5px;
             padding: 5px;
             cursor: pointer;
@@ -94,7 +66,28 @@
             display: none;
         }
 
+        .enlace {
+            display: block;
+            width: 90%;
+            color: #FFFFFF;
+            font-size: 1em;
+            text-decoration: none;
+            text-align: center;
+            border: 5px solid var(--madera_claro);
+            border-radius: 5px;
+            margin: 15px auto;
+        }
+
+        .enlace:hover {
+            text-decoration: none;
+            background-color: var(--madera_claro);
+            border-radius: 5px;
+        }
+
         @media (min-width:1000px) {
+            /*computadora*/
+
+            /*Pantalla grande*/
             .main_info {
                 display: flex;
             }
@@ -157,9 +150,7 @@
 
 <body>
     <section id="proyectos">
-        <h1 id="tituloPW">Desarrollos Web a su disposición</h1>
-        <br>
-        <hr>
+        <h1 id="titulo_principal">Desarrollos Web a su disposición</h1>
         <br>
         <div class="proyecto">
             <div class="main_info">
@@ -177,7 +168,7 @@
                         Google Sheets desde donde actualizar los precios, descripciones,
                         agregar o eliminar productos con un solo click
                     </p>
-                    <p class="enlace"><a href="EcomerseTemplateProd/Ecomerce.html" class="enlace">Ver Modelo</a></p>
+                    <a href="EcomerseTemplateProd/Ecomerce.html" class="enlace">Ver Modelo</a>
                     <div onclick="visibility('info_ecommerceprod')" class="ver_mas">Ver Más</div>
                 </div>
                 <img src="Imagenes/WebPage.svg" class="imagen_ejemplo">
@@ -218,7 +209,6 @@
         </div>
         <br>
         <hr>
-        <br>
         <div class="proyecto">
             <div class="main_info">
                 <img src="Imagenes/WebPage.svg" class="imagen_ejemplo">
@@ -235,9 +225,9 @@
                         Es un gran fora de presentarse a si mismo, pudiendolo adjuntar a un correo, su tarjeta de
                         presentacion y funciona excelente como reemplazo del antiguo y aburrido CV en pdf.
                     </p>
-                    <p class="enlace"><a href="PortfolioTemplate/PortfolioTemplate.html" class="enlace">Ver Modelo</a>
+                    <a href="PortfolioTemplate/PortfolioTemplate.html" class="enlace">Ver Modelo</a>
                     <div onclick="visibility('info_portfolio')" class="ver_mas">Ver Más</div>
-                    </p>
+
                 </div>
             </div>
             <div class="more_description" id="info_portfolio">
@@ -271,7 +261,6 @@
         </div>
         <br>
         <hr>
-        <br>
         <div class="proyecto">
             <div class="main_info">
                 <div class="info">
@@ -291,7 +280,7 @@
                         de
                         Mecado Pago.
                     </p>
-                    <p class="enlace"><a href="EcomerseTemplateCart/Ecomerce.html" class="enlace">Ver Modelo</a></p>
+                    <a href="EcomerseTemplateCart/Ecomerce.html" class="enlace">Ver Modelo</a>
                     <div onclick="visibility('info_ecommercecart')" class="ver_mas">Ver Más</div>
                 </div>
                 <img src="Imagenes/WebPage.svg" class="imagen_ejemplo">
@@ -333,7 +322,6 @@
         </div>
         <br>
         <hr>
-        <br>
         <div class="proyecto">
             <div class="main_info">
                 <img src="Imagenes/WebPage.svg" class="imagen_ejemplo">
@@ -342,12 +330,12 @@
                     <h1>Pagina web 100% personalizada</h1>
                     <h2>¿Quiere obtener una pagina web completamene a su preferencia y necesidades?
                     </h2>
-                    <p>
-                        Podemos desarrollar una pagina web 100% pensada para usted, tendiendo en cuenta los
-                        requerimientos y preferencias de su negocio, emprendimiento, producto o servicio.</p>
                     <h3>
                         <span class="destacado">LAS POSIBILIDADES SON INFINITAS!</span>
                     </h3>
+                    <p>
+                        Podemos desarrollar una pagina web 100% pensada para usted, tendiendo en cuenta los
+                        requerimientos y preferencias de su negocio, emprendimiento, producto o servicio.</p>
                     <div onclick="visibility('info_ecommercecart')" class="ver_mas">Ver Más</div>
                 </div>
             </div>
@@ -378,6 +366,7 @@
             </div>
             <div class="btn_comprar">Obtener</div>
         </div>
+        <br>
     </section>
     <script>
         function visibility(info) {

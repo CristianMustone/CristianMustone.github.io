@@ -5,6 +5,8 @@ document.addEventListener('DOMContentLoaded', function () {
     let currentSlide = 0;
     let scrolling = false;
 
+    console.log(slides);
+
     function showSlide() {
         slides.forEach((slide, index) => {
             if (index === currentSlide) {
