@@ -46,6 +46,8 @@ h2 {
 }
 
 .enlace {
+    max-width: 80%;
+    display: inline-block;
     color: #FFFFFF;
     width: 100%;
     font-size: 2em;
@@ -119,17 +121,19 @@ h2 {
 /* ----------------------------------------------------------- */
 .card {
     width: 100%;
-    margin: 2vmin auto;
+    margin: 5vmin auto;
     text-align: center;
 }
 
 .img_card {
     max-width: 90%;
-    margin-bottom: 3vmin;
+    margin-bottom: 7vmin;
 }
 
 /* --------------------------------------------------------------- */
-@media(min-width:720px) {
+/* Version de Escritorio */
+
+@media(min-width:1000px) {
     .menu {
         display: flex;
         justify-content: space-around;

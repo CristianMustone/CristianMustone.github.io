@@ -16,22 +16,14 @@
             --background_negro: #111111;
         }
 
-        /* 
-        html {
-            background-color: green;
-        } */
-
-        /* body {
-            background-color: blue;
-            margin: 0 5vmin;
-            width: 100%;
-        } */
-
         h1 {
             padding: 0;
         }
 
         .cards {
+            width: 80%;
+            margin: 0 5vmin;
+            display: inline-block;
             display: flex;
             flex-direction: column;
             align-content: center;
@@ -53,7 +45,7 @@
             border: 5px solid var(--madera_oscuro);
             border-radius: 5px;
             padding: 5vmin;
-            margin: 2vmin;
+            /* margin: 2vmin; */
         }
 
         .card p {
@@ -65,8 +57,9 @@
             text-underline-offset: 3px;
         }
 
-        @media(min-width:1000px) {
+        @media(min-width:1300px) {
 
+            /* Version de Escritorio */
             .enlace-personalizado:hover {
                 text-decoration: none;
                 background-color: var(--madera_claro);
@@ -74,7 +67,7 @@
             }
 
             .cards {
-                width: 100%;
+                width: 95%;
                 display: flex;
                 flex-direction: row;
                 gap: 5vmin;
@@ -99,7 +92,6 @@
         <div class="cards">
             <div class="card">
                 <h1>RPA</h1>
-                <button onclick="redirectToInfo()" style="cursor: pointer;">Realizar consulta </button>
                 <p>
                     Se realizan automatizaciones de tareas digitales a traves de
                     lenguajes de programación requeridos, pudiendo integrar gran
@@ -107,25 +99,26 @@
                     con paginas web, ya sea para descargar, enviar, subir archivos
                     y obtencion de información de la web.
                 </p>
-                <a> </a>
+
+                <button onclick="redirectToInfo()" style="cursor: pointer;">Realizar consulta </button>
             </div>
             <div class="card">
                 <h1>Scripts</h1>
-                <button onclick="redirectToInfo()" style="cursor: pointer;">Realizar consulta </button>
                 <p>
                     Realizacion de programas para el armado
                     de informes, archiovos o reportes requeridos con una cierta
                     periodicidad. Esto puede incluir graficos, KPIs, diseño de boletas
                     o facturas, manejo de bases de datos como SQL.
                 </p>
+                <button onclick="redirectToInfo()" style="cursor: pointer;">Realizar consulta </button>
             </div>
             <div class="card">
                 <h1>Páginas WEB</h1>
-                <button onclick="redirectToInfo()" style="cursor: pointer;">Realizar consulta </button>
                 <p>
                     Creacion de paginas web a pedido del usuario con utilidades requeridas,
                     como solicitud de informacion, venta al publico, publicidad en linea, etc.
                 </p>
+                <button onclick="redirectToInfo()" style="cursor: pointer;">Realizar consulta </button>
                 <a href="PaginasWeb.html" class="enlace">Ver Propuestas</a>
             </div>
         </div>
