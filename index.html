@@ -5,6 +5,16 @@
     <title>Subir archivo de texto y enviar contenido</title>
 
     <script>
+
+        function redirectToGitHub() {
+        // URL del repositorio de GitHub al que deseas redirigir
+            const url = "https://github.com/CristianMustone/3D-Printer-Robotic-Arm/tree/main";
+        
+            // Redirige al usuario a la URL especificada
+            window.location.href = url;
+        }
+
+        
         function mostrarContenido() {
             var fileInput = document.getElementById('archivo');
             var file = fileInput.files[0];
