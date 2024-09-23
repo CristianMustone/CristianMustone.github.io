@@ -75,6 +75,12 @@
                     console.error("Error en la solicitud GET: " + error);
                 });
         }
+
+        function redirectToSlicer() {
+            // Redirige al archivo HTML dentro del repositorio
+            window.location.href = "Info.html";
+        }
+
     </script>
 
 
@@ -173,8 +179,8 @@
             <button onclick="PedirAvance()" class="text-button">Ver Avance</button>
         </div>
         <br><br>
-        <h2 onclick="redirectToGitHub()" style="cursor: pointer;">Ir al repositorio de GitHub del proyecto</h2>
-        <h2 onclick="redirectToSlicer()" style="cursor: pointer;">Crear Archivo a subir (a partir de un svg)</h2>
+        <h2 onclick="redirectToGitHub()" style="cursor: pointer;" class="text-button">Ir al repositorio de GitHub del proyecto</h2>
+        <h2 onclick="redirectToSlicer()" style="cursor: pointer;" class="text-button">Crear Archivo a subir (a partir de un svg)</h2>
     </div>
     <div class="background"></div>
 </body>
