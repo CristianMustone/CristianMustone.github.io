@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gráfico de Ejes X e Y</title>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <h1>Gráfico de Ejes X e Y en el Cuadrante Positivo</h1>
+    <section id="botonera">
+        <!-- <input type="file" id="fileInput" accept=".svg" /> -->
+        <button onclick="seleccionarArchivo()">Select File</button>
+        <button onclick="decreaseXOffset()">Left</button>
+        <button onclick="increaseYOffset()">Up</button>
+        <button onclick="decreaseYOffset()">Down</button>
+        <button onclick="increaseXOffset()">Right</button>
+        <button onclick="increaseEscala()">Zoom +</button>
+        <button onclick="decreaseEscala()">Zoom -</button>
+        <button onclick="downloadFile()">Download File</button>
+        <input id="capas" type="text" placeholder="Hola" onfocus="clearPlaceholder(this)">
+        <input id="grosor_capas" type="text" placeholder="Hola" onfocus="clearPlaceholder(this)">
+    </section>
+    <canvas id="graficoXY"></canvas>
+
+    <script src="app.js"></script>
+</body>
+
+</html>

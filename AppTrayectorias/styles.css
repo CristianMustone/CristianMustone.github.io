@@ -1,0 +1,41 @@
+body,
+html {
+    background-color: #6b7cff;
+    max-width: 90vw;
+    margin: auto;
+}
+
+h1 {
+    color: #3b24c8;
+    text-align: center;
+    font-size: 5vh;
+}
+
+#botonera {
+    margin: 3vh;
+    padding: 3vh;
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+#botonera button {
+    flex: 1;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 15%;
+}
+
+button:hover {
+    background-color: green;
+}
+
+#graficoXY {
+    background-color: white;
+    border-radius: 5%;
+    width: 70vmin;
+    height: 70vmin;
+    margin: auto;
+}
